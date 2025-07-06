@@ -1,0 +1,39 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug RobotSystem",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/RobotSystem",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/build",
+      "environment": [
+        {
+          "name": "RESOURCE_PATH",
+          "value": "${workspaceFolder}/system"
+        },
+        {
+          "name": "LD_LIBRARY_PATH",
+          "value": "${workspaceFolder}/libtorch/lib"
+        }
+      ],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Set LD_LIBRARY_PATH inside gdb",
+          "text": "set environment LD_LIBRARY_PATH=${workspaceFolder}/libtorch/lib",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "Build RobotSystem"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+# 忽略编译输出
+build/*
+CMakeFiles/
+cmake_install.cmake
+Makefile
+deploy/*
+# 忽略中间产物和外部依赖
+out/*
+src/reinforcement_test/
+# 忽略Python模型、缓存
+*.pt
+*.pth
+*.onnx
+
+# 忽略 lib 
+libtorch/*
+!libtorch/.keep
+
+system/*
+!system/.keep
+
+# 忽略系统文件
+.DS_Store
+Thumbs.db
+
+# 忽略临时文件和日志
+*.log
+*.tmp
+*.swp
+
+# 忽略CTest输出
+Testing/
+test/
+cmake_install.cmake
+CTestTestfile.cmake
+CPackConfig.cmake
+CPackSourceConfig.cmake
+DartConfiguration.tcl
+model_2999.pt
+sshCpyLib.sh
